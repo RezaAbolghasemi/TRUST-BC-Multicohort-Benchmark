@@ -1,0 +1,246 @@
+[*] Global output directory: results/run_20260831_190334
+
+>>> Loading WBCD from scikit-learn...
+
+==========================================================================================
+******************************* TRUST-BC Evaluation: WBCD ********************************
+==========================================================================================
+[*] Dev: 483 | Holdout: 86 | Features: 30 -> 15
+[*] Split manifest saved.
+[1] Running leakage-free nested CV (5x10 folds)...
+
+ -> Per-pipeline calibration:
+  Pipeline  Brier   ECE
+     Leaky  0.024 0.020
+   XGBoost  0.034 0.012
+  LightGBM  0.033 0.016
+Nested_PCA  0.023 0.018
+ Nested_RF  0.031 0.016
+   Unified  0.024 0.017
+
+ -> Table 3 summary:
+  Pipeline  Primary_Metric_Mean  Primary_Metric_Std  CI_95_low  CI_95_high  Adj_p_vs_Leaky  Adj_p_vs_Unified  pTOST_vs_Leaky  Brier   ECE
+     Leaky               0.9685              0.0165     0.9656      0.9712             NaN               NaN             NaN  0.024 0.020
+   XGBoost               0.9520              0.0208     0.9489      0.9553          0.4448            0.3292             NaN  0.034 0.012
+  LightGBM               0.9582              0.0230     0.9546      0.9617          0.6642            0.6615             NaN  0.033 0.016
+Nested_PCA               0.9716              0.0165     0.9691      0.9737             NaN               NaN             NaN  0.023 0.018
+ Nested_RF               0.9594              0.0194     0.9579      0.9609             NaN               NaN             NaN  0.031 0.016
+   Unified               0.9708              0.0167     0.9683      0.9731          0.6642               NaN          0.0002  0.024 0.017
+
+ -> Baseline Row Overlap (Hash): 0.00%
+    Note: PCA leakage is parametric (global component estimation), not row duplication.
+
+ -> Leaky baseline:          Acc=96.85%, AUC=0.993
+ -> Tuned XGBoost:           Acc=95.20%, AUC=0.990 (Holm-p vs Leaky=0.445)
+ -> Tuned LightGBM:          Acc=95.82%, AUC=0.990 (Holm-p vs Leaky=0.664)
+ -> Nested PCA-only:         Acc=97.16%, AUC=0.994
+ -> Nested RF-only:          Acc=95.94%, AUC=0.992 (PCA vs RF p=0.185, descriptive only)
+ -> Unified pipeline:        Acc=97.08%, AUC=0.993 [95% Block-Boot CI (accuracy): 96.8% - 97.3%]
+    (Superiority vs Leaky, Holm p): 0.6642
+    (TOST Equivalence vs Leaky, margin=2.0%): 0.0002
+    (Superiority vs XGBoost, Holm p): 0.3292
+    (Superiority vs LightGBM, Holm p): 0.6615
+ -> Pooled Calibration:      Brier=0.024, ECE=0.017 | Slope=1.223, Intercept=-0.036
+ -> Architecture Selection Frequency (Unified): {'pca': 47, 'rf': 3}
+
+[2] Split conformal prediction (coverage target = 95.0%, 100 repetitions)...
+    Winner's curse check (5 seeds): {'pca': 5}
+ -> Set sizes (mean): Empty=1.6, Certain=94.5, Uncertain=0.9
+ -> Empirical coverage: 96.53% (target 95.0%)
+ -> Empty sets:     1.70%
+ -> Singleton sets: 97.40%
+ -> Ambiguous sets: 0.90%
+
+[3] Sensitivity analyses...
+    [Sensitivity] Sample-size learning curves...
+    [Sensitivity] Dimensionality reduction (n_components) analysis...
+
+[4] Evaluating on independent holdout lockbox (15%)...
+ -> Holdout Accuracy:         100.00% [95% CI: 95.7% - 100.0%]
+ -> Holdout Balanced Acc:     100.00%
+ -> Holdout Sensitivity:      100.00%
+ -> Holdout Specificity:      100.00%
+ -> Holdout AUROC:            1.000
+ -> Holdout Brier:            0.010
+ -> Holdout Calibration:      Slope=14.820, Intercept=1.784
+ -> Holdout CP Coverage:      98.84% [95% CI: 93.7% - 99.8%]
+ -> Holdout Confusion:        [TN=54, FP=0] | [FN=0, TP=32]
+
+[5] SHAP interpretability on holdout...
+    [Interpretability] Computing SHAP values...
+100%
+ 86/86 [00:02<00:00, 35.18it/s]
+
+[6] Generating main figures...
+ Finished WBCD in 527.90 seconds.
+
+>>> Loading Coimbra from UCI...
+    Coimbra SHA-256: 68c56c7e7a38dfff1046a8b35e5b3afc17229eff7fb9d8dca7053442b1c37e7e
+
+==========================================================================================
+****************************** TRUST-BC Evaluation: Coimbra ******************************
+==========================================================================================
+[*] Dev: 98 | Holdout: 18 | Features: 9 -> 4
+[*] Split manifest saved.
+[1] Running leakage-free nested CV (5x10 folds)...
+
+ -> Per-pipeline calibration:
+  Pipeline  Brier   ECE
+     Leaky  0.208 0.087
+   XGBoost  0.174 0.062
+  LightGBM  0.178 0.071
+Nested_PCA  0.212 0.062
+ Nested_RF  0.183 0.062
+   Unified  0.186 0.054
+
+ -> Table 3 summary:
+  Pipeline  Primary_Metric_Mean  Primary_Metric_Std  CI_95_low  CI_95_high  Adj_p_vs_Leaky  Adj_p_vs_Unified  pTOST_vs_Leaky  Brier   ECE
+     Leaky               0.6273              0.1070     0.6055      0.6477             NaN               NaN             NaN  0.208 0.087
+   XGBoost               0.7564              0.0972     0.7404      0.7721          0.2494            0.9897             NaN  0.174 0.062
+  LightGBM               0.7478              0.1066     0.7327      0.7620          0.2371            0.9897             NaN  0.178 0.071
+Nested_PCA               0.6325              0.1088     0.6142      0.6507             NaN               NaN             NaN  0.212 0.062
+ Nested_RF               0.7237              0.0820     0.7098      0.7393             NaN               NaN             NaN  0.183 0.062
+   Unified               0.7135              0.0870     0.7021      0.7277          0.2657               NaN          0.9059  0.186 0.054
+
+ -> Baseline Row Overlap (Hash): 0.00%
+    Note: PCA leakage is parametric (global component estimation), not row duplication.
+
+ -> Leaky baseline:          Acc=62.73%, AUC=0.736
+ -> Tuned XGBoost:           Acc=75.64%, AUC=0.815 (Holm-p vs Leaky=0.249)
+ -> Tuned LightGBM:          Acc=74.78%, AUC=0.820 (Holm-p vs Leaky=0.237)
+ -> Nested PCA-only:         Acc=63.25%, AUC=0.732
+ -> Nested RF-only:          Acc=72.37%, AUC=0.807 (PCA vs RF p=0.081, descriptive only)
+ -> Unified pipeline:        Acc=71.35%, AUC=0.794 [95% Block-Boot CI (accuracy): 70.2% - 72.8%]
+    (Superiority vs Leaky, Holm p): 0.2657
+    (TOST Equivalence vs Leaky, margin=2.0%): 0.9059
+    (Superiority vs XGBoost, Holm p): 0.9897
+    (Superiority vs LightGBM, Holm p): 0.9897
+ -> Pooled Calibration:      Brier=0.186, ECE=0.054 | Slope=0.737, Intercept=0.083
+ -> Architecture Selection Frequency (Unified): {'rf': 46, 'pca': 4}
+
+[2] Split conformal prediction (coverage target = 95.0%, 100 repetitions)...
+    Winner's curse check (5 seeds): {'rf': 5}
+ -> Set sizes (mean): Empty=0.0, Certain=5.5, Uncertain=14.4
+ -> Empirical coverage: 95.70% (target 95.0%)
+ -> Empty sets:     0.20%
+ -> Singleton sets: 27.70%
+ -> Ambiguous sets: 72.10%
+
+[3] Sensitivity analyses...
+    [Sensitivity] Sample-size learning curves...
+    [Sensitivity] Dimensionality reduction (n_components) analysis...
+
+[4] Evaluating on independent holdout lockbox (15%)...
+ -> Holdout Accuracy:         61.11% [95% CI: 38.6% - 79.7%]
+ -> Holdout Balanced Acc:     62.50%
+ -> Holdout Sensitivity:      50.00%
+ -> Holdout Specificity:      75.00%
+ -> Holdout AUROC:            0.725
+ -> Holdout Brier:            0.234
+ -> Holdout Calibration:      Slope=0.632, Intercept=0.257
+ -> Holdout CP Coverage:      83.33% [95% CI: 60.8% - 94.2%]
+ -> Holdout Confusion:        [TN=6, FP=2] | [FN=5, TP=5]
+
+[5] SHAP interpretability on holdout...
+    [Interpretability] Computing SHAP values...
+100%
+ 18/18 [00:00<00:00, 24.06it/s]
+
+[6] Generating main figures...
+ Finished Coimbra in 590.19 seconds.
+
+>>> Loading SEER dataset...
+
+[Upload SEER file]
+No file chosen Upload widget is only available when the cell has been executed in the current browser session. Please rerun this cell to enable.
+Saving SEER Breast Cancer Data.zip to SEER Breast Cancer Data.zip
+    Dropping '6th Stage' to reduce collinearity (preserving T/N stage).
+
+======================================================================
+[Survival Branch] Running penalized Weibull AFT model...
+======================================================================
+ -> AFT C-index on test set: 0.722
+ -> Kaplan-Meier log-rank p-value: 1.02e-09
+
+======================================================================
+[Classification Branch] Filtering right-censored patients...
+======================================================================
+    Excluded censored <60mo: 754 of 4024 patients.
+    Final classification cohort: 3270 patients.
+    Encoded 12 raw predictors into 16 numeric columns (one-hot encoding of categorical variables).
+
+==========================================================================================
+******************************* TRUST-BC Evaluation: SEER ********************************
+==========================================================================================
+[*] Dev: 2779 | Holdout: 491 | Features: 16 -> 8
+[*] Split manifest saved.
+[1] Running leakage-free nested CV (5x7 folds)...
+
+ -> Per-pipeline calibration:
+  Pipeline  Brier   ECE
+     Leaky  0.155 0.133
+   XGBoost  0.140 0.022
+  LightGBM  0.149 0.052
+Nested_PCA  0.155 0.133
+ Nested_RF  0.152 0.128
+   Unified  0.152 0.128
+
+ -> Table 3 summary:
+  Pipeline  Primary_Metric_Mean  Primary_Metric_Std  CI_95_low  CI_95_high  Adj_p_vs_Leaky  Adj_p_vs_Unified  pTOST_vs_Leaky  Brier   ECE
+     Leaky               0.7180              0.0245     0.7165      0.7190             NaN               NaN             NaN  0.155 0.133
+   XGBoost               0.7322              0.0270     0.7283      0.7357          0.5011               1.0             NaN  0.140 0.022
+  LightGBM               0.7310              0.0271     0.7275      0.7341          0.5011               1.0             NaN  0.149 0.055
+Nested_PCA               0.7178              0.0247     0.7163      0.7190             NaN               NaN             NaN  0.155 0.133
+ Nested_RF               0.7320              0.0231     0.7303      0.7333             NaN               NaN             NaN  0.152 0.128
+   Unified               0.7320              0.0231     0.7303      0.7333          0.2939               NaN          0.7116  0.152 0.128
+
+ -> Baseline Row Overlap (Hash): 0.20%
+    Note: PCA leakage is parametric (global component estimation), not row duplication.
+
+ -> Leaky baseline:          Acc=80.03%, AUC=0.718
+ -> Tuned XGBoost:           Acc=80.79%, AUC=0.732 (Holm-p vs Leaky=0.501)
+ -> Tuned LightGBM:          Acc=79.27%, AUC=0.731 (Holm-p vs Leaky=0.501)
+ -> Nested PCA-only:         Acc=79.99%, AUC=0.718
+ -> Nested RF-only:          Acc=79.85%, AUC=0.732 (PCA vs RF p=0.066, descriptive only)
+ -> Unified pipeline:        Acc=79.85%, AUC=0.732 [95% Block-Boot CI (roc_auc): 0.730 - 0.733]
+    (Superiority vs Leaky, Holm p): 0.2939
+    (TOST Equivalence vs Leaky, margin=1.0%): 0.7116
+    (Superiority vs XGBoost, Holm p): 1.0000
+    (Superiority vs LightGBM, Holm p): 1.0000
+ -> Pooled Calibration:      Brier=0.152, ECE=0.128 | Slope=1.134, Intercept=-0.698
+ -> Architecture Selection Frequency (Unified): {'rf': 35}
+
+[2] Split conformal prediction (coverage target = 95.0%, 100 repetitions)...
+    Winner's curse check (5 seeds): {'rf': 5}
+ -> Set sizes (mean): Empty=0.0, Certain=270.3, Uncertain=285.7
+ -> Empirical coverage: 95.32% (target 95.0%)
+ -> Empty sets:     0.00%
+ -> Singleton sets: 48.62%
+ -> Ambiguous sets: 51.38%
+
+[3] Sensitivity analyses...
+    [Sensitivity] Sample-size learning curves...
+    [Sensitivity] Dimensionality reduction (n_components) analysis...
+
+[4] Evaluating on independent holdout lockbox (15%)...
+ -> Holdout Accuracy:         80.04% [95% CI: 76.3% - 83.3%]
+ -> Holdout Balanced Acc:     62.63%
+ -> Holdout Sensitivity:      34.78%
+ -> Holdout Specificity:      90.48%
+ -> Holdout AUROC:            0.731
+ -> Holdout Brier:            0.149
+ -> Holdout Calibration:      Slope=1.194, Intercept=-0.663
+ -> Holdout CP Coverage:      96.54% [95% CI: 94.5% - 97.8%]
+ -> Holdout Confusion:        [TN=361, FP=38] | [FN=60, TP=32]
+
+[5] SHAP interpretability on holdout...
+    [Interpretability] Computing SHAP values...
+100%
+ 100/100 [00:19<00:00,  3.37it/s]
+
+[6] Generating main figures...
+ Finished SEER in 2286.61 seconds.
+
+[*] Environment packages saved to requirements.txt
+
+=== TRUST-BC pipeline completed successfully ===

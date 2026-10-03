@@ -1,0 +1,2 @@
+Dataset,N_holdout,Accuracy_pct,Accuracy_CI_low_pct,Accuracy_CI_high_pct,Balanced_Accuracy_pct,Sensitivity_pct,Specificity_pct,TP,FN,TN,FP,AUROC,Brier,Calibration_Slope,Calibration_Intercept,Conformal_Coverage_pct,Conformal_Coverage_CI_low_pct,Conformal_Coverage_CI_high_pct
+Coimbra,18,61.11,38.62,79.69,62.5,50.0,75.0,5,5,6,2,0.725,0.234,0.632,0.257,83.33,60.78,94.16

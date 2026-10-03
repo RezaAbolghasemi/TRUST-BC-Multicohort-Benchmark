@@ -1,0 +1,14 @@
+{
+  "source": 4024,
+  "deaths_total": 616,
+  "deaths_le60": 458,
+  "deaths_gt60": 158,
+  "alive_lt60_excluded": 754,
+  "alive_ge60": 2654,
+  "age_min": 30,
+  "age_max": 69,
+  "N0": 0,
+  "dup_rows": 1,
+  "followup_median": 73.0,
+  "followup_max": 107
+}

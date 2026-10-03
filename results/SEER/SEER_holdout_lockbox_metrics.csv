@@ -1,0 +1,2 @@
+Dataset,N_holdout,Accuracy_pct,Accuracy_CI_low_pct,Accuracy_CI_high_pct,Balanced_Accuracy_pct,Sensitivity_pct,Specificity_pct,TP,FN,TN,FP,AUROC,Brier,Calibration_Slope,Calibration_Intercept,Conformal_Coverage_pct,Conformal_Coverage_CI_low_pct,Conformal_Coverage_CI_high_pct
+SEER,491,80.04,76.28,83.34,62.63,34.78,90.48,32,60,361,38,0.731,0.149,1.194,-0.663,96.54,94.53,97.83

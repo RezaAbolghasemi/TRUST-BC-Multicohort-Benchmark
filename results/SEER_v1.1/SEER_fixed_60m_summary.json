@@ -1,0 +1,144 @@
+{
+  "mode": "fixed_60m",
+  "N": 3270,
+  "events": 458,
+  "dev_n": 2779,
+  "dev_events": 389,
+  "holdout_n": 491,
+  "holdout_events": 69,
+  "n_features": 16,
+  "n_components": 8,
+  "arch": {
+    "rf": 31,
+    "pca": 4
+  },
+  "dca_points": {
+    "0.05": [
+      0.0947141152629685,
+      0.0947141152629685
+    ],
+    "0.1": [
+      0.04603117485449258,
+      0.044420454999800074
+    ],
+    "0.15": [
+      0.007656463089013965,
+      0.0
+    ],
+    "0.2": [
+      0.0,
+      0.0
+    ],
+    "0.25": [
+      0.0,
+      0.0
+    ],
+    "0.3": [
+      0.0,
+      0.0
+    ],
+    "0.4": [
+      0.0,
+      0.0
+    ]
+  },
+  "winners_curse_seeds": {
+    "rf": 5
+  },
+  "best_params": {
+    "clf__svm__C": "10.0",
+    "feature_opt__method": "rf"
+  },
+  "conformal": {
+    "Empty_pct": 0.0,
+    "Singleton_pct": 61.91726618705036,
+    "Ambiguous_pct": 38.08273381294964,
+    "Coverage_pct_mean": 95.2589928057554,
+    "Coverage_pct_sd": 0.9773719553647864,
+    "n_test": 556,
+    "n_cal": 556,
+    "n_cal_events": 78.0,
+    "n_proper_train": 1667,
+    "E_mean": 0.0,
+    "S_mean": 344.26,
+    "F_mean": 211.74,
+    "E_sd": 0.0,
+    "S_sd": 29.049826161269884,
+    "F_sd": 29.049826161269884
+  },
+  "lockbox": {
+    "N": 491,
+    "events": 69,
+    "Accuracy": 0.835030549898167,
+    "Accuracy_CI": [
+      0.7996249167158784,
+      0.8652344924851632
+    ],
+    "Balanced_accuracy": 0.6373205577306134,
+    "Sensitivity": 0.36231884057971014,
+    "Specificity": 0.9123222748815166,
+    "TP": 25,
+    "FN": 44,
+    "TN": 385,
+    "FP": 37,
+    "AUROC": 0.7218558966962016,
+    "AUROC_CI": [
+      0.646059138677107,
+      0.7895846211965106
+    ],
+    "Brier": 0.13206634386708346,
+    "Brier_CI": [
+      0.12098051674465211,
+      0.14385306202518636
+    ],
+    "Cal_slope": 1.0320741850576804,
+    "Cal_intercept": -0.9997913080813232,
+    "CITL": -1.0184619458774788,
+    "Slope_Int_CI": [
+      [
+        0.6908808521655017,
+        -1.2181107552849275
+      ],
+      [
+        1.409381976046095,
+        -0.7793013073222361
+      ]
+    ],
+    "CITL_CI": [
+      -1.0970871991556037,
+      -0.9399909553230223
+    ],
+    "Conformal_coverage": 0.9531568228105907,
+    "Conformal_CI": [
+      0.9306920593529315,
+      0.9685858649463497
+    ],
+    "Ambiguous_pct": 44.39918533604888,
+    "n_cal_lockbox": 556,
+    "n_cal_lockbox_events": 78,
+    "n_train_lockbox": 2223,
+    "n_train_lockbox_events": 311
+  },
+  "shapley_top": [
+    "Progesterone Status_Positive",
+    "N Stage",
+    "Reginol Node Positive",
+    "Age",
+    "Grade",
+    "Regional Node Examined"
+  ],
+  "rf_selection_counts": {
+    "Progesterone Status_Positive": 31,
+    "Age": 31,
+    "N Stage": 31,
+    "T Stage": 31,
+    "Grade": 31,
+    "Tumor Size": 31,
+    "Regional Node Examined": 31,
+    "Reginol Node Positive": 31,
+    "Race_White": 0,
+    "Marital Status_Married (including common law)": 0
+  },
+  "pooled_oof_auc": 0.7382357983474767,
+  "pooled_ap": 0.3489580071781145
+}

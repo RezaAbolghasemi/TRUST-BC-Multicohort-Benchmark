@@ -1,0 +1,2 @@
+Dataset,Empty_pct,Singleton_pct,Ambiguous_pct,Coverage_pct_mean,Coverage_pct_std,N_test_approx
+SEER,0.0,48.62,51.38,95.32,1.12,556

@@ -1,0 +1,2 @@
+Dataset,N_holdout,Accuracy_pct,Accuracy_CI_low_pct,Accuracy_CI_high_pct,Balanced_Accuracy_pct,Sensitivity_pct,Specificity_pct,TP,FN,TN,FP,AUROC,Brier,Calibration_Slope,Calibration_Intercept,Conformal_Coverage_pct,Conformal_Coverage_CI_low_pct,Conformal_Coverage_CI_high_pct
+WBCD,86,100.0,95.72,100.0,100.0,100.0,100.0,32,0,54,0,1.0,0.01,14.82,1.784,98.84,93.7,99.79

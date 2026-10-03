@@ -1,0 +1,3 @@
+method,count,total_folds,frequency_pct
+rf,46,50,92.0
+pca,4,50,8.0
