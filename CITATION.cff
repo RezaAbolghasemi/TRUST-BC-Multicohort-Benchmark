@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark, please cite it as below."
+title: "TRUST-BC: A Multicohort Benchmark for Leakage-Free, Calibrated, and Uncertainty-Aware Breast Cancer Prediction Models"
+type: software
+version: "1.1.0"
+authors:
+  - family-names: "Shayegan"
+    given-names: "Mohammad Amin"
+    affiliation: "Department of Computer, Shi.C., Islamic Azad University, Shiraz, Iran"
+    email: "MA.Shayegan@iau.ac.ir"
+  - family-names: "Abolghasemi"
+    given-names: "Reza"
+    affiliation: "Department of Computer, Shi.C., Islamic Azad University, Shiraz, Iran"
+    email: "Reza.Abolghasemi@iau.ir"
+  - family-names: "Salehi"
+    given-names: "Mohammadreza"
+    affiliation: "Department of Computer, Shi.C., Islamic Azad University, Shiraz, Iran"
+  - family-names: "Kiarsi"
+    given-names: "Armaghan"
+    affiliation: "Faculty of Health, Medicine and Society (Oncology), University of Chester, United Kingdom"
+repository-code: "https://github.com/mohammdreza-ui/TRUST-BC-Multicohort-Benchmark"
+license: MIT
+date-released: 2026-09-27
+keywords:
+  - breast cancer
+  - machine learning
+  - data leakage
+  - conformal prediction
+  - probability calibration
+  - TRIPOD+AI
+  - PROBAST+AI
+  - survival analysis
+preferred-citation:
+  type: article
+  title: "TRUST-BC: A Multicohort Benchmark for Leakage-Free, Calibrated, and Uncertainty-Aware Breast Cancer Prediction Models"
+  authors:
+    - family-names: "Shayegan"
+      given-names: "Mohammad Amin"
+    - family-names: "Abolghasemi"
+      given-names: "Reza"
+    - family-names: "Salehi"
+      given-names: "Mohammadreza"
+    - family-names: "Kiarsi"
+      given-names: "Armaghan"
+  year: 2026
+  journal: "Preprint"

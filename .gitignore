@@ -1,0 +1,35 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw SEER data (must be obtained manually — see data/README.md)
+data/*.csv
+data/*SEER*
+*.zip
+!results/**/*.zip
+
+# New pipeline runs (keep only the curated results/ folder committed above)
+results/run_*/
+
+# Jupyter
+*.nbconvert.ipynb
+
+# Logs
+*.log
+!results/logs/*.log
+
+# Environment export scratch
+pip-freeze-*.txt
