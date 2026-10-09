@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRUST-BC: A Multicohort Benchmark for Leakage-Free and Calibrated Breast Cancer Prediction
+TRUST-BC: A Multicohort Benchmark for Leakage-Free, Calibration-Audited, and Uncertainty-Aware Breast Cancer Prediction Models
 
 This script implements the full evaluation pipeline described in our manuscript.
 It provides nested cross-validation with leakage prevention, split conformal prediction,
@@ -14,7 +14,7 @@ The framework is benchmarked on three breast cancer datasets:
     - SEER (population-based registry, with censoring-aware filtering)
 
 Reported following TRIPOD+AI; an author self-assessment against PROBAST+AI is in
-supplementary/. For details, see the accompanying paper.
+Online Resource 1 (supplementary/). For details, see the accompanying paper.
 
 Version 1.1: the SEER classification label is now a fixed-horizon 5-year label
 (see SEER_LABEL_MODE). Set SEER_LABEL_MODE = 'as_reported' to reproduce v1.0.

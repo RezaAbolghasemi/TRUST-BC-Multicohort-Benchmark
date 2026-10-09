@@ -1,0 +1,53 @@
+Item,Topic,Status,Location and notes
+1,"Title: development/evaluation, population, outcome",Partial,Title identifies a breast cancer prediction benchmark; the study type (development with internal validation) is stated in the Abstract and Sec. 1.3.
+2,Abstract,Reported,Abstract; see Table S1b.
+3a,Healthcare context; diagnostic or prognostic; existing models,Reported,Sec. 1.1; Sec. 4.4.
+3b,"Target population, intended purpose and users",Reported,Sec. 1.1; Sec. 4.3; Section S10.5.
+3c,Known health inequalities between groups,Reported,Sec. 1.2 (final paragraph).
+4,"Study objectives, development and/or evaluation",Reported,Sec. 1.3.
+5a,Data sources and representativeness,Reported,Sec. 2.1; details in Section S10.1.
+5b,Dates of accrual and end of follow-up,Reported,"Sec. 2.1; Section S10.1. WBCD: before 1993; Coimbra: 2009–2013; SEER: diagnoses 2006–2010, follow-up to 107 months."
+6a,"Setting, number and location of centres",Reported,Sec. 2.1; centres and locations in Section S10.1.
+6b,Eligibility criteria,Reported,Sec. 2.1; Sec. 2.2.
+6c,Treatments and how handled,Reported,Sec. 2.1 (paragraph after cohort list).
+7,"Data preprocessing and quality checks, across groups",Reported,Sec. 2.3 (Data preparation); details in Section S10.2.
+8a,"Outcome definition, time horizon, rationale",Reported,"Sec. 2.2; corrected SEER labelling, Section S8."
+8b,Qualifications of outcome assessors,Reported,Sec. 2.2 (histopathology; registry linkage).
+8c,Blinding of outcome assessment,Reported,Sec. 2.2.
+9a,Choice of initial predictors and pre-selection,Reported,Sec. 2.1 (Predictors).
+9b,"Predictor definitions, how and when measured",Reported,Sec. 2.1 (Predictors); full predictor list and measurement in Section S10.1.
+9c,Qualifications of predictor assessors,Reported,Sec. 2.1; Section S10.1 (WBCD operator-initialised boundaries; SEER registrars).
+10,Sample size justification,Reported,Sec. 2.1 (Sample size); Table S9.
+11,Missing data,Reported,Sec. 2.2. No missing values; no imputation.
+12a,How data were used (partitioning),Reported,Sec. 2.2; Sec. 2.3; Fig. 1.
+12b,Handling of predictors,Reported,Sec. 2.1; Sec. 2.3.
+12c,"Model type, building, tuning, internal validation",Reported,Sec. 2.3; Sec. 2.4.
+12d,Heterogeneity across clusters,Reported,Sec. 2.3; Sections S10.1–S10.2: not examinable (single-centre diagnostic data; no registry identifiers).
+12e,Performance measures and model comparison,Reported,Sec. 2.5; Sec. 2.7.
+12f,Model updating,Reported,Sec. 2.3: none performed.
+12g,How evaluation predictions were calculated,Reported,Sec. 2.3; Sec. 2.6.
+13,Class imbalance,Reported,"Sec. 2.3 (Data preparation, class imbalance and output)."
+14,Fairness approaches,Reported,Sec. 2.8.
+15,Model output and thresholds,Reported,Sec. 2.3.
+16,Differences between development and evaluation data,Reported,Sec. 2.2.
+17,Ethics,Reported,Statements and Declarations.
+18a,Funding,Reported,Statements and Declarations.
+18b,Conflicts of interest,Reported,Statements and Declarations.
+18c,Protocol,Reported,Statements and Declarations: no formal protocol; analysis plan fixed in code.
+18d,Registration,Reported,Statements and Declarations: not registered.
+18e,Data sharing,Reported,Statements and Declarations.
+18f,Code sharing,Reported,"Statements and Declarations (release v1.1, MIT licence)."
+19,Patient and public involvement,Reported,Statements and Declarations: none.
+20a,Participant flow,Reported,Sec. 3.1; Figure S1.
+20b,"Participant characteristics, by group",Reported,Tables S3 and S3b.
+20c,Development vs evaluation distributions,Reported,Table S3 (standardised mean differences).
+21,Participants and events per analysis,Reported,Table S4.
+22,Full model specification / access,Reported,Sec. 2.3; code and fitted pipelines in repository; model card in Section S11.
+23a,"Performance with CIs, including subgroups",Reported,Tables 2–5 of the main text; Tables S5–S7.
+23b,Heterogeneity across clusters,,Not examined (item 12d).
+24,Model updating results,,No updating.
+25,"Interpretation, including fairness",Reported,Sec. 4; Sec. 3.6.
+26,Limitations,Reported,Sec. 4.5; complete list in Section S10.6.
+27a,Handling of poor-quality or missing input,Reported,Sec. 4.3 (summary); full text in Section S10.5 (Input data and user expertise).
+27b,User interaction and expertise,Reported,Sec. 4.3; Section S10.5 (Input data and user expertise).
+27c,Future research and generalisability,Reported,Sec. 4.5; Sec. 5.

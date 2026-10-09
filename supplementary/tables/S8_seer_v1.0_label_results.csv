@@ -1,0 +1,7 @@
+Pipeline,AUROC mean ± SD,95% CI (corrected),Holm p vs Leaky,Holm p vs Unified,Brier / ECE
+Leaky baseline,0.718 ± 0.024,0.692–0.744,–,–,0.155 / 0.133
+Tuned XGBoost,0.732 ± 0.027,0.703–0.761,0.5011,1.0000,0.140 / 0.022
+Tuned LightGBM,0.731 ± 0.027,0.702–0.760,0.5011,1.0000,0.149 / 0.052
+Nested PCA-only,0.718 ± 0.025,0.691–0.744,–,–,0.155 / 0.133
+Nested RF-only,0.732 ± 0.023,0.707–0.757,–,–,0.152 / 0.128
+Unified,0.732 ± 0.023,0.707–0.757,0.2939,–,0.152 / 0.128

@@ -1,0 +1,10 @@
+Analysis set,WBCD,Coimbra,SEER 5-year
+Analytical cohort,569 (212),116 (64),"3,270 (458)"
+Development set,483 (180),98 (54),"2,779 (389)"
+Outer CV training fold (approx.),386 (144),78 (43),"2,223 (311)"
+Outer CV test fold (approx.),97 (36),20 (11),556 (78)
+"Inner tuning folds (approx., training / validation)",257 / 129,52 / 26,"1,482 / 741"
+Conformal: proper training / calibration / test,289 / 97 (36) / 97,58 / 20 (11) / 20,"1,667 / 556 (78) / 556"
+Lockbox model: training / conformal calibration,386 (144) / 97 (36),78 (43) / 20 (11),"2,223 (311) / 556 (78)"
+Lockbox,86 (32),18 (10),491 (69)
+SEER survival: training / test,–,–,"3,219 (493) / 805 (123)"

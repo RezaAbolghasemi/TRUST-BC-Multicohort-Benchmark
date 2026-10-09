@@ -93,7 +93,7 @@ yc_, pc_ = cl.y.values, cl.p.values
 co = {'AUROC': roc_auc_score(yc_, pc_), 'AUROC_CI': boot(yc_, pc_, roc_auc_score).tolist(),
       'Brier': brier_score_loss(yc_, pc_), 'Brier_CI': boot(yc_, pc_, brier_score_loss).tolist(),
       'slope_intercept': list(cal_slope_int(yc_, pc_)), 'slope_intercept_CI': boot(yc_, pc_, lambda a, b: np.array(cal_slope_int(a, b))).tolist()}
-json.dump({'WBCD_lockbox': wb, 'Coimbra_lockbox': co}, open(os.path.join(out, 'S8_lockbox_additional_CIs.json'), 'w'), indent=2)
+json.dump({'WBCD_lockbox': wb, 'Coimbra_lockbox': co}, open(os.path.join(out, 'lockbox_additional_CIs_WBCD_Coimbra.json'), 'w'), indent=2)
 print('WBCD', wb, 'Coimbra', co)
 
 # ---------- SEER per-patient fairness ----------
@@ -118,7 +118,7 @@ cs = pd.read_csv(os.path.join(rev, 'SEER_fixed_60m_conformal_subgroups.csv'))
 cov = {(r.variable, r.group): r.coverage_pct for r in cs.itertuples()}
 fr['conformal_coverage_pct'] = [np.nan if v == 'Overall' else cov.get(('race' if v == 'Race' else 'age', {'60-69': '>=60'}.get(g, g)), np.nan)
                                 for v, g in zip(fr.variable, fr.group)]
-fr.to_csv(os.path.join(out, 'S6_seer_fairness_subgroups.csv'), index=False)
+fr.to_csv(os.path.join(out, 'Table5_seer_subgroup_performance.csv'), index=False)
 print(fr.round(3).to_string())
 
 # ---------- characteristics ----------
@@ -183,5 +183,5 @@ flow = {'source': len(raw), 'deaths_total': int((st == 'dead').sum()), 'deaths_l
         'alive_ge60': int(((st == 'alive') & (mo >= 60)).sum()), 'age_min': int(raw.Age.min()), 'age_max': int(raw.Age.max()),
         'N0': int((raw['N Stage'] == 'N0').sum()), 'dup_rows': int(raw.drop(columns=['Unnamed: 3'], errors='ignore').duplicated().sum()),
         'followup_median': float(mo.median()), 'followup_max': int(mo.max())}
-json.dump(flow, open(os.path.join(out, 'S1_participant_flow_counts.json'), 'w'), indent=2)
+json.dump(flow, open(os.path.join(out, 'FigS1_participant_flow_counts.json'), 'w'), indent=2)
 print(flow)

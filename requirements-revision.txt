@@ -1,0 +1,11 @@
+# Dependencies for the v1.1 re-analysis scripts in scripts/
+# (SEER fixed-horizon label, supplementary analyses, publication figures).
+# The first four pins are the versions used for the v1.1 re-analysis (Online Resource 1, S8);
+# matplotlib and seaborn were not version-logged for these scripts, so only minimum versions are given.
+# Requires Python >= 3.11 (numpy 2.4, scipy 1.17 and pandas 3.0 do not support 3.10).
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.2
+scikit-learn==1.8.0
+matplotlib>=3.10
+seaborn>=0.13

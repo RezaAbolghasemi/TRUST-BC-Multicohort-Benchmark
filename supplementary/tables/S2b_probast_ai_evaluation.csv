@@ -1,0 +1,7 @@
+Domain,WBCD lockbox,Coimbra lockbox,SEER lockbox,SEER survival test,Rationale
+1. Participants,Low,High,Unclear,Low,Random stratified split from the same source. Coimbra inherits the case–control design; SEER classification lockbox inherits the censoring exclusion.
+2. Predictors,Low,Low,Low,Low,Same definitions; no lockbox information used in development.
+3. Outcome,Low,Low,Unclear,Low,As in development.
+4. Analysis,High,High,High,Low,"Events: 32, 10, 69 (below ∼100 recommended); WBCD calibration unstable (separation). Survival test: 123 events; censoring handled by the model; C-index CI reported."
+"Applicability (domains 1, 2, 3)","Low, Low, Low","High, Low, Low","Unclear, Low, Low","Unclear, Low, Low",Internal validation only.
+Overall risk of bias,High,High,High,Low,"Driven mainly by the number of events and, for Coimbra, the study design."

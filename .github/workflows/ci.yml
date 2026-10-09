@@ -15,12 +15,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.12"
 
-      - name: Install dependencies
+      - name: Check that the pinned pipeline requirements resolve
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install --dry-run -r requirements.txt
+
+      - name: Install revision-script dependencies
+        # requirements.txt (v1.0 pins) and requirements-revision.txt (v1.1 pins) are
+        # separate environments and must not be installed together.
+        run: pip install -r requirements-revision.txt
 
       - name: Compile-check pipeline and revision scripts
         run: |
@@ -30,3 +35,6 @@ jobs:
       - name: Import smoke test (revision core)
         run: |
           python -c "import sys; sys.path.insert(0, 'scripts'); import seer_revision_core; print('OK')"
+
+      - name: Riley sample-size check (Online Resource Table S9)
+        run: python scripts/riley_sample_size.py

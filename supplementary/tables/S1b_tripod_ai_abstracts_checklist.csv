@@ -1,0 +1,14 @@
+Item,Topic,Status,Location in abstract
+1,Title,Reported,Title.
+2,Background,Reported,Opening sentence (rationale).
+3,Objectives,Reported,Second sentence (aim: development and internal validation).
+4,Sources of data,Reported,Third sentence (three public cohorts).
+5,Eligibility criteria and setting,Partial,Third sentence (cohorts and sizes); details in Section 2.1.
+6,Outcome and time horizon,Partial,"Outcomes are not named explicitly; the cohorts are named in the third sentence and the outcome definitions (malignancy, breast cancer status, all-cause death within 5 years) are given in Section 2.2."
+7,"Model type, building and internal validation",Reported,Fourth and fifth sentences (nested cross-validation; single evaluation on a 15% held-out partition).
+8,Performance measures,Reported,"Fourth sentence (calibration, decision curve and conformal analyses); sixth to ninth sentences."
+9,Number of participants and events,Partial,Third sentence (participants per cohort); numbers of events are given in Table 1.
+10,Predictors in final model,Partial,Fourth sentence (PCA or random-forest feature selection); predictors in Section 2.1.
+11,Performance estimates with CIs,Reported,Sixth to ninth sentences.
+12,Interpretation,Reported,Final two sentences.
+13,Registration,Not in abstract,Stated in Statements and Declarations (not registered).

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or benchmark, please cite it as below."
-title: "TRUST-BC: A Multicohort Benchmark for Leakage-Free, Calibrated, and Uncertainty-Aware Breast Cancer Prediction Models"
+title: "TRUST-BC: A Multicohort Benchmark for Leakage-Free, Calibration-Audited, and Uncertainty-Aware Breast Cancer Prediction Models"
 type: software
 version: "1.1.0"
 authors:
@@ -18,9 +18,9 @@ authors:
   - family-names: "Kiarsi"
     given-names: "Armaghan"
     affiliation: "Faculty of Health, Medicine and Society (Oncology), University of Chester, United Kingdom"
-repository-code: "https://github.com/mohammdreza-ui/TRUST-BC-Multicohort-Benchmark"
+repository-code: "https://github.com/RezaAbolghasemi/TRUST-BC-Multicohort-Benchmark"
 license: MIT
-date-released: 2026-09-27
+date-released: 2026-10-09
 keywords:
   - breast cancer
   - machine learning
@@ -32,7 +32,7 @@ keywords:
   - survival analysis
 preferred-citation:
   type: article
-  title: "TRUST-BC: A Multicohort Benchmark for Leakage-Free, Calibrated, and Uncertainty-Aware Breast Cancer Prediction Models"
+  title: "TRUST-BC: A Multicohort Benchmark for Leakage-Free, Calibration-Audited, and Uncertainty-Aware Breast Cancer Prediction Models"
   authors:
     - family-names: "Shayegan"
       given-names: "Mohammad Amin"
@@ -43,4 +43,5 @@ preferred-citation:
     - family-names: "Kiarsi"
       given-names: "Armaghan"
   year: 2026
-  journal: "Preprint"
+  journal: "Preprint (Zenodo)"
+  doi: "10.5281/zenodo.22926051"

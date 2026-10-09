@@ -1,0 +1,7 @@
+Domain,WBCD,Coimbra,SEER 5-y,Rationale
+1. Participants and data sources,Unclear,High,Unclear,"WBCD: single centre; accrual details limited. Coimbra: case–control design with healthy controls. SEER: population-based but secondary public extraction, not re-derived from SEER*Stat; 754 patients with unknown 5-year status excluded."
+2. Predictors,Low,Low,Low,Predictors available at the time of prediction; survival time and status excluded; preprocessing fitted within training folds. WBCD boundary initialisation is operator-dependent.
+3. Outcome,Low,Low,Unclear,"WBCD/Coimbra: pathology-based diagnosis. SEER: all-cause mortality from registry linkage; fixed-horizon labels corrected in v1.1, but exclusion of censored patients may bias the outcome distribution if censoring is informative."
+4. Analysis,Low,High,Low,"Nested CV; inner-fold preprocessing; calibration, discrimination and uncertainty reported. WBCD meets the Riley minimum (479 vs 483). Coimbra: EPV 5.8 and 98 vs 381 required. SEER: 2,779 vs 1,645 required; class weighting produced overprediction, which is reported."
+"Applicability (domains 1, 2, 3)","Low, Low, Low","High, Low, Low","Unclear, Low, Low","Coimbra case–control sample does not represent a screening population. SEER restricted to node-positive women aged 30–69, diagnosed 2006–2010, without treatment data."
+Overall quality,Low,High,Unclear,

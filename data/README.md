@@ -30,7 +30,7 @@ the equivalent cohort definition (female patients with infiltrating ductal or lo
 carcinoma, SEER histology code 8522/3, diagnosed 2006–2010, November 2017 submission)
 can be reproduced directly from **SEER\*Stat** under the appropriate institutional Data
 Use Agreement with the National Cancer Institute. See Section 2.1 of the manuscript
-(`paper/TRUST-BC_manuscript_v1.1.pdf`) for full cohort inclusion/exclusion criteria.
+(`paper/TRUST-BC_manuscript_v1.1.docx`) for full cohort inclusion/exclusion criteria.
 
 ## Precomputed results
 
@@ -50,4 +50,6 @@ The 5-year classification label in v1.1 is:
 - non-event: alive with `Survival Months >= 60`, or death after month 60 (2,812 patients);
 - excluded: alive with `Survival Months < 60` (754 patients).
 
-`python scripts/seer_revision_core.py` functions (`load_seer`) implement this definition.
+`load_seer` in `scripts/seer_revision_core.py` implements this definition.
+
+The public file contains one exact duplicate record, which was retained (*N* = 4,024); Tadj et al. (2026) removed it (*N* = 4,023). Row-hash overlap between training and test folds was 0.20% for SEER (duplicate covariate patterns, not index-level leakage), and 0.00% for WBCD and Coimbra.
